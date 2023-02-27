@@ -3,7 +3,7 @@ extends CanvasLayer
 signal start_game
 
 func _process(delta):
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("ui_accept") and $Button.is_visible_in_tree():
 		emit_signal("start_game")
 
 func update_score(score):
